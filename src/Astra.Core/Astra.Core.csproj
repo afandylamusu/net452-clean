@@ -50,6 +50,7 @@
     <Compile Include="Services\ToDoItemService.cs" />
     <Compile Include="SharedKernel\BaseDomainEvent.cs" />
     <Compile Include="SharedKernel\BaseEntity.cs" />
+    <Compile Include="Interfaces\IAuditTrail.cs" />
     <Compile Include="SharedKernel\IgnoreMemberAttribute.cs" />
     <Compile Include="SharedKernel\ValueObject.cs" />
   </ItemGroup>

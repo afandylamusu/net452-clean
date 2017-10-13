@@ -6,6 +6,8 @@ namespace Astra.Core.SharedKernel
     public abstract class BaseEntity
     {
         public int Id { get; set; }
+        
+        public bool Active { get; set; }
 
         public List<BaseDomainEvent> Events = new List<BaseDomainEvent>();
     }

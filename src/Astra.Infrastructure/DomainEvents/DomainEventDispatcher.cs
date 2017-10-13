@@ -1,8 +1,9 @@
-﻿using System;
-using System.Linq;
-using StructureMap;
-using Astra.Core.Interfaces;
+﻿using Astra.Core.Interfaces;
 using Astra.Core.SharedKernel;
+using Autofac;
+using System;
+using System.Collections;
+using System.Linq;
 
 namespace Astra.Infrastructure.DomainEvents
 {
@@ -21,7 +22,7 @@ namespace Astra.Infrastructure.DomainEvents
         {
             var handlerType = typeof(IHandle<>).MakeGenericType(domainEvent.GetType());
             var wrapperType = typeof(DomainEventHandler<>).MakeGenericType(domainEvent.GetType());
-            var handlers = _container.GetAllInstances(handlerType);
+            var handlers = (IEnumerable)_container.Resolve(handlerType);
             var wrappedHandlers = handlers
                 .Cast<object>()
                 .Select(handler => (DomainEventHandler)Activator.CreateInstance(wrapperType, handler));

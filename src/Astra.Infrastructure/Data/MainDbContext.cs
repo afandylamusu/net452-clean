@@ -6,17 +6,22 @@ using System.Data.Entity;
 
 namespace Astra.Infrastructure.Data
 {
-    public class MainDbContext : DbContext
+    public abstract class MainDbContext : DbContext
     {
-        private readonly IDomainEventDispatcher _dispatcher;
+        protected readonly IDomainEventDispatcher _dispatcher;
+
+        public MainDbContext() : base("DefaultConnection")
+        {
+
+        }
+
+        public MainDbContext(string connectionString) : base(connectionString) { }
 
         public MainDbContext(string connectionString, IDomainEventDispatcher dispatcher)
             : base(connectionString)
         {
             _dispatcher = dispatcher;
         }
-
-        public DbSet<ToDoItem> ToDoItems { get; set; }
 
         public override int SaveChanges()
         {
