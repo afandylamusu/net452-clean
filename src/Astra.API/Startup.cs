@@ -5,6 +5,7 @@ using Owin;
 using Swashbuckle.Application;
 using System.Reflection;
 using System.Web.Http;
+using System;
 
 [assembly: OwinStartup(typeof(Astra.API.Startup))]
 
@@ -16,10 +17,12 @@ namespace Astra.API
         {
             var builder = new ContainerBuilder();
 
-            // Register your Web API controllers.
-            builder.RegisterApiControllers(Assembly.GetExecutingAssembly());
 
             // Run other optional steps, like registering filters,
+            RegisterServices(builder);
+
+            // Register your Web API controllers.
+            builder.RegisterApiControllers(Assembly.GetExecutingAssembly());
 
             var container = builder.Build();
 
@@ -34,6 +37,10 @@ namespace Astra.API
             RouteMVCConfig.RegisterRoutes(System.Web.Routing.RouteTable.Routes);
         }
 
+        private void RegisterServices(ContainerBuilder builder)
+        {
+            
+        }
 
         private HttpConfiguration ConfigureWebApi(IContainer container)
         {

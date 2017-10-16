@@ -11,4 +11,5 @@ namespace Astra.Core.SharedKernel
 
         public List<BaseDomainEvent> Events = new List<BaseDomainEvent>();
     }
+
 }
