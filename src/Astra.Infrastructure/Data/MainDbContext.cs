@@ -10,12 +10,12 @@ namespace Astra.Infrastructure.Data
     {
         protected readonly IDomainEventDispatcher _dispatcher;
 
-        public MainDbContext() : base("DefaultConnection")
+        protected MainDbContext() : base()
         {
 
         }
 
-        public MainDbContext(string connectionString) : base(connectionString) { }
+        protected MainDbContext(string connectionString) : base(connectionString) { }
 
         public MainDbContext(string connectionString, IDomainEventDispatcher dispatcher)
             : base(connectionString)

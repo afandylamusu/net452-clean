@@ -8,13 +8,22 @@ using System.Web;
 
 namespace Astra.API.Infrastructure
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public class ApiDbContext : MainDbContext
     {
+        /// <summary>
+        /// 
+        /// </summary>
         public ApiDbContext() : base("DefaultConnection")
         {
-
+            
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
         public DbSet<ToDoItem> ToDoItems { get; set; }
     }
 }
