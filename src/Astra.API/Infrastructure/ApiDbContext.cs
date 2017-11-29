@@ -1,10 +1,4 @@
-﻿using Astra.Core.Entities;
-using Astra.Infrastructure.Data;
-using System;
-using System.Collections.Generic;
-using System.Data.Entity;
-using System.Linq;
-using System.Web;
+﻿using Astra.EntityFramework;
 
 namespace Astra.API.Infrastructure
 {
@@ -24,6 +18,5 @@ namespace Astra.API.Infrastructure
         /// <summary>
         /// 
         /// </summary>
-        public DbSet<ToDoItem> ToDoItems { get; set; }
     }
 }

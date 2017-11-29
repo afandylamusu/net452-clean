@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Astra.Core.SharedKernel
+namespace Astra.Core
 {
     public abstract class BaseDomainEvent
     {

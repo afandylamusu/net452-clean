@@ -5,7 +5,7 @@ using System.Reflection;
 
 
 
-namespace Astra.Core.SharedKernel
+namespace Astra.Core
 {
     // source: https://github.com/jhewlett/ValueObject
     public abstract class ValueObject : IEquatable<ValueObject>

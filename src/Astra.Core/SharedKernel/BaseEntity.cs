@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
 
-namespace Astra.Core.SharedKernel
+namespace Astra.Core
 {
     // This can be modified to BaseEntity<TId> to support multiple key types (e.g. Guid)
-    public abstract class BaseEntity
+    public abstract class BaseEntity : ValueObject
     {
         public int Id { get; set; }
         
@@ -11,5 +11,4 @@ namespace Astra.Core.SharedKernel
 
         public List<BaseDomainEvent> Events = new List<BaseDomainEvent>();
     }
-
 }

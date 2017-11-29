@@ -1,6 +1,4 @@
-﻿using Astra.Core.SharedKernel;
-
-namespace Astra.Core.Interfaces
+﻿namespace Astra.Core.Interfaces
 {
     public interface IHandle<T> where T : BaseDomainEvent
     {

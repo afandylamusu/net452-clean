@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Astra.Core.SharedKernel
+namespace Astra.Core
 {
     // source: https://github.com/jhewlett/ValueObject
     [AttributeUsage(AttributeTargets.Property | AttributeTargets.Field)]

@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using Astra.Core.SharedKernel;
 
 namespace Astra.Core.Interfaces
 {

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Runtime.Serialization;
 
-namespace Astra.Core.SharedKernel
+namespace Astra.Core
 {
     /// <summary>
     /// Represents errors that occur during application execution
